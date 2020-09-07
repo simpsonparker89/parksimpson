@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr"
+  xmlns:fb="http://ogp.me/ns/fb#"
+  xmlns:og="http://ogp.me/ns#">
+<head>
+  <link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"8e74a4f5d0",applicationID:"31148187"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(c(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(5),c=e(6),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,n){s[n]=i(p+n,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(l+"tracer",[u.now(),e,t],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&d("lcp",[t[t.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var n=Math.round(e.timeStamp),t={type:e.type};n<=p.now()?t.fid=p.now()-n:n>p.offset&&n<=Date.now()?(n-=p.offset,t.fid=p.now()-n):n=p.now(),g=!0,d("timing",["fi",n,t])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(4),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e){function n(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,n,!1)}n.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],5:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],6:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],7:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function t(t,r,i,o){if(!p.aborted||o){e&&e(t,r,i);for(var a=n(i),c=v(t),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[t]];return d&&d.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(t)}function y(e,n){u(e,function(e,t){n=n||"feature",w[t]=n,n in s||(s[n]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(5),s={},d={},p=n.exports=i();p.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(w,function(n,t){e[n]||(e[n]=t)});var t=a();f("mark",["onload",t+E.offset],null,"api"),f("timing",["load",t]);var r=l.createElement("script");r.src="https://"+e.agent,n.parentNode.insertBefore(r,n)}}function i(){"complete"===l.readyState&&o()}function o(){f("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-E.offset}var c=(new Date).getTime(),f=e("handle"),u=e(5),s=e("ee"),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,y=g&&g.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var h=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1177.min.js"},b=g&&y&&y[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:c,now:a,origin:h,features:{},xhrWrappable:b,userAgent:d};e(1),e(2),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),f("mark",["firstbyte",c],null,"api");var x=0,O=e(7)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(6),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof t?t(r,a):t||{}}catch(u){p([u,"",[r,a,i],c])}s(n+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(n+"err",[r,a,d],c),d}finally{s(n+"end",[r,a,f],c)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<n.length;f++)c=n[f],a=e[c],r(a)||(e[c]=t(a,u?c+i:i,o,c))}function s(t,r,i){if(!f||n){var o=f;f=!0;try{e.emit(t,r,i,n)}catch(a){p([a,t,r,i])}f=o}}function d(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){p([r])}for(var i in e)c.call(e,i)&&(n[i]=e[i]);return n}function p(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="description" content="The basics of what you need to know about investing in stocks." />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="https://dfi.wa.gov/financial-education/information/basics-investing-stocks" />
+<link rel="shortlink" href="https://dfi.wa.gov/node/6631" />
+<meta property="og:site_name" content="Washington State Department of Financial Institutions" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The Basics of Investing In Stocks" />
+<meta property="og:url" content="https://dfi.wa.gov/financial-education/information/basics-investing-stocks" />
+<meta property="og:description" content="The basics of what you need to know about investing in stocks." />
+<meta property="og:image" content="https://dfi.wa.gov/sites/default/files/investing-stocks-16x9.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@dficonsumers" />
+<meta name="twitter:creator" content="@dficonsumers" />
+<meta name="twitter:url" content="https://dfi.wa.gov/financial-education/information/basics-investing-stocks" />
+<meta name="twitter:title" content="The Basics of Investing In Stocks" />
+<meta name="twitter:description" content="The basics of what you need to know about investing in stocks." />
+<meta name="twitter:image" content="https://dfi.wa.gov/sites/default/files/investing-stocks-16x9.jpg" />
+<meta data-type="string" class="swiftype" name="category" content="Financial Education" />
+<meta data-type="string" class="swiftype" name="pagetext" content="What Are Stocks? Stocks are a type of security that gives stockholders a share of ownership in a company. Companies sell shares typically to gain additional money to grow the company. This is called the initial public offering (IPO). After the IPO, stockholders can resell shares on the stock market. Stock prices rise or fall and are typically driven by expectations of the corporation’s earnings, or profits. Types Of Stocks There are two main kinds of stocks, common stock and preferred stock. Common Stocks Common stock entitles owners to vote at shareholder meetings and receive dividends." />
+  <title>The Basics of Investing In Stocks</title>
+  <link type="text/css" rel="stylesheet" href="https://dfi.wa.gov/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://dfi.wa.gov/sites/default/files/css/css_9-3-wQiW6mfd56qoKp6lxhyjjZRS1jJZxyn5kUoMmWc.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://dfi.wa.gov/sites/default/files/css/css_BVy7LXoUBatI3n0MwOpdX0VkMT6MIuxvNYWdI8K4G4g.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.5/dist/css/bootstrap.min.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.3.1/7.x-3.x/drupal-bootstrap.min.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://dfi.wa.gov/sites/default/files/css/css_q3m7Ml5ow0cnUuPo7G4TpDpzakuF7vozD2QEKf47vuI.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://dfi.wa.gov/sites/default/files/css/css_LbFMdOReoN5xwWub2H7z4Lfx3ugs785dfI5wngCZBPA.css" media="print" />
+<link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" media="all" />
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="https://dfi.wa.gov/sites/default/files/js/js_5BEyhYiwVwdObPC8n2Jt5D_qihqDXRxw4CQNot7VzWI.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/all/modules/jquery_update/replace/jquery/1.9/jquery.min.js'>\x3C/script>")</script>
+<script src="https://dfi.wa.gov/sites/default/files/js/js_uJR3Qfgc-bGacxkh36HU9Xm2Q98e_V5UWlFISwie5ro.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.5/dist/js/bootstrap.min.js"></script>
+<script src="https://dfi.wa.gov/sites/default/files/js/js_Cl0RumpiVc-4xPZgT5waU8dKTf-obio3uYy0FdssRD8.js"></script>
+<script src="https://dfi.wa.gov/sites/default/files/js/js_qtEap1FTgvPuDDwlSGKswqo6NixS1MB8El-HgNtWGXg.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-394155-1", {"cookieDomain":"auto"});ga("send", "pageview");</script>
+<script src="https://dfi.wa.gov/sites/default/files/js/js_FZIAzMaAnulidEDOCy6egRZJ7xM5AShV_S0TA-rrRGk.js"></script>
+<script>window.a2a_config=window.a2a_config||{};window.da2a={done:false,html_done:false,script_ready:false,script_load:function(){var a=document.createElement('script'),s=document.getElementsByTagName('script')[0];a.type='text/javascript';a.async=true;a.src='https://static.addtoany.com/menu/page.js';s.parentNode.insertBefore(a,s);da2a.script_load=function(){};},script_onready:function(){da2a.script_ready=true;if(da2a.html_done)da2a.init();},init:function(){for(var i=0,el,target,targets=da2a.targets,length=targets.length;i<length;i++){el=document.getElementById('da2a_'+(i+1));target=targets[i];a2a_config.linkname=target.title;a2a_config.linkurl=target.url;if(el){a2a.init('page',{target:el});el.id='';}da2a.done=true;}da2a.targets=[];}};(function ($){Drupal.behaviors.addToAny = {attach: function (context, settings) {if (context !== document && window.da2a) {if(da2a.script_ready)a2a.init_all();da2a.script_load();}}}})(jQuery);a2a_config.callbacks=a2a_config.callbacks||[];a2a_config.callbacks.push({ready:da2a.script_onready});a2a_config.overlays=a2a_config.overlays||[];a2a_config.templates=a2a_config.templates||{};</script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"finedclearinghouse","theme_token":"5eWijzb2BBIb8cpR5whms2SqjAId2YYPyAHkTON7EVk","js":{"0":1,"sites\/all\/themes\/bootstrap\/js\/bootstrap.js":1,"public:\/\/google_tag\/google_tag.script.js":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.9.1\/jquery.min.js":1,"1":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@3.3.5\/dist\/js\/bootstrap.min.js":1,"sites\/all\/modules\/user_alert\/js\/user-alert.js":1,"sites\/all\/modules\/responsive_menus\/styles\/responsive_menus_simple\/js\/responsive_menus_simple.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/all\/themes\/finedclearinghouse\/js\/jquery.ba-hashchange.min.js":1,"sites\/all\/themes\/finedclearinghouse\/js\/jquery.swiftype.autocomplete.js":1,"sites\/all\/themes\/finedclearinghouse\/js\/jquery.swiftype.search.js":1,"sites\/all\/themes\/finedclearinghouse\/js\/swiftype.financialeducation.js":1,"sites\/all\/modules\/extlink\/js\/extlink.js":1,"3":1},"css":{"modules\/system\/system.base.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/menu_attach_block\/menu_attach_block.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/user_alert\/css\/user-alert.css":1,"sites\/all\/modules\/extlink\/css\/extlink.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/responsive_menus\/styles\/responsive_menus_simple\/css\/responsive_menus_simple.css":1,"sites\/all\/themes\/finedclearinghouse\/css\/autocomplete.css":1,"sites\/all\/modules\/addtoany\/addtoany.css":1,"https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@3.3.5\/dist\/css\/bootstrap.min.css":1,"https:\/\/cdn.jsdelivr.net\/npm\/@unicorn-fail\/drupal-bootstrap-styles@0.0.2\/dist\/3.3.1\/7.x-3.x\/drupal-bootstrap.min.css":1,"sites\/all\/themes\/finedclearinghouse\/css\/style.css":1,"sites\/all\/themes\/finedclearinghouse\/css\/print.css":1,"https:\/\/use.fontawesome.com\/releases\/v5.8.2\/css\/all.css":1}},"user_alert":{"url_prefix":""},"responsive_menus":[{"toggler_text":"\u2630 Menu","selectors":[".main-dfi-menu"],"media_size":"900","media_unit":"px","remove_attributes":"1","responsive_menus_style":"responsive_menus_simple"}],"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"extlink":{"extTarget":"_blank","extClass":"ext","extLabel":"(link is external)","extImgClass":0,"extIconPlacement":0,"extSubdomains":0,"extExclude":"","extInclude":"","extCssExclude":".no-external-icon, ul.main-links","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site. Thank you for visiting our website.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)","extUseFontAwesome":false},"bootstrap":{"anchorsFix":"0","anchorsSmoothScrolling":"0","formHasError":1,"popoverEnabled":1,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","triggerAutoclose":1,"title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-6631 node-type-financial-education-education-ce">
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <div class="region region-page-top">
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8CGPGG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>  </div>
+  <style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+   if (self === top) {
+       var antiClickjack = document.getElementById("antiClickjack");
+       antiClickjack.parentNode.removeChild(antiClickjack);
+   } else {
+       top.location = self.location;
+   }
+</script>
+<div id="full-width-navbar">
+  <div class="container">
+              <a class="navbar-btn" href="/" title="Home">
+          <img class="logo" src="https://dfi.wa.gov/sites/all/themes/finedclearinghouse/svg/dfi-bw-logo.svg" alt="Home" />
+        </a>
+            <div id="clearinghouse-title"><a href="/financial-education">Financial Education</a></div>
+
+      <div id="header-search-block">
+        <div id="search-block">
+        <form class="search-form-header">
+        <div>
+          <input type="text" class="st-search-input-header">
+        <button type="submit">Search</button>
+        </div>
+       </form>
+      </div>
+</div>
+</div>
+<div id="navbar-wrapper">
+<header id="navbar" role="banner" class="navbar container navbar-default">
+  <div class="container">
+      <div id="clearinghouse-mobile-title"><a href="/financial-education">Financial Education</a></div>
+            <a href="#" id="search-mobile-block-toggle"><img src="/images/financial-education/magnify-glass.png" alt="Search" class="search-mobile"></a>
+
+          <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>    </div>
+
+      <div class="navbar-collapse collapse">
+        <nav role="navigation">
+          <div class="region region-navigation">
+    <section id="block-menu-menu-financial-education-menu" class="block block-menu clearfix">
+
+      
+  <ul class="fined-nav nav nav-fill navbar-nav"><li class="first leaf"><a href="/financial-education/information-topic" title="Find information/resources by topic">Money Topics</a></li>
+<li class="leaf"><a href="/financial-education/calendar">Find A Class</a</li>
+<li class="leaf"><a href="/financial-education/financial-education-services">Local Resources</a></li>
+<li class="leaf"><a href="/financial-education/educators" title="Information and resources for Washington educators.">For Educators</a></li>
+<li class="last leaf"><a href="/financial-education/blog" title="Blog">Blog</a></li>
+</ul>
+</section>
+  </div>        
+        </nav>
+      </div>
+  </div>
+  <div id="search-block-mobile">
+<div class="container">
+<form class="search-form-header-mobile">
+      <div>
+      <input type="text" class="st-search-input-header-mobile">
+      <button type="submit">Search</button>
+      </div>
+    </form>
+</div>
+</div>
+
+</header>
+</div>
+</div>
+<div class="section-header">
+<div class="container">
+    </div>
+</div>
+<div class="main-container container">
+
+  <header role="banner" id="page-header">
+      </header> <!-- /#page-header -->
+        <h5 id="printer-header">Information from the Washington State Department of Financial Institutions</h5>
+        <ol class="breadcrumb"><li><a href="/financial-education/information-topic">Money Topics</a></li>
+<li><a href="/financial-education/information/investing">Investing</a></li>
+</ol>      
+
+              <h1 class="page-header">The Basics of Investing In Stocks</h1>
+            <div class="row content-container">
+
+    
+    <section class="col-sm-12">
+            <a id="main-content"></a>
+                                                          <div class="region region-content">
+    <section id="block-addtoany-addtoany-button" class="block block-addtoany clearfix">
+
+      
+  <span class="a2a_kit a2a_kit_size_32 a2a_target addtoany_list" id="da2a_1">
+      <p>
+Share:
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a href="javascript:window.print();"><img alt="Print" height="32" src="/sites/default/files/printer-icon.png" srcset="/sites/default/files/printer-icon.svg" width="32" /></a>
+</p>
+
+      
+      
+    </span>
+    <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+if(window.da2a)da2a.script_load();
+//--><!]]>
+</script>
+</section>
+<section id="block-user-alert-user-alert" class="block block-user-alert clearfix">
+
+      
+   
+</section>
+<section id="block-system-main" class="block block-system clearfix">
+
+      
+  <article id="node-6631" class="node node-financial-education-education-ce clearfix">
+    <div class="field field-name-field-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img class="img-responsive" src="https://dfi.wa.gov/sites/default/files/investing-stocks-16x9.jpg" width="1600" height="900" alt="" /></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><h2>What Are Stocks?</h2>
+<p>Stocks are a type of security that gives stockholders a share of ownership in a company.</p>
+<p>Companies sell shares typically to gain additional money to grow the company. This is called the initial public offering (IPO). After the IPO, stockholders can resell shares on the stock market.</p>
+<p>Stock prices rise or fall and are typically driven by expectations of the corporation’s earnings, or profits.</p>
+<h2>Types Of Stocks</h2>
+<p>There are two main kinds of stocks, common stock and preferred stock.</p>
+<ul>
+<li><strong>Common Stocks</strong><br />
+Common stock entitles owners to vote at shareholder meetings and receive dividends.</li>
+<li><strong>Preferred Stocks</strong><br />
+Preferred stockholders usually don’t have voting rights but they receive dividend payments before common stockholders do, and have priority over common stockholders if the company goes bankrupt and its assets are liquidated.</li>
+</ul>
+<p>Common and preferred stocks may fall into these commonly used categories:</p>
+<ul>
+<li><strong>Growth Stocks</strong><br />
+Growth stocks have earnings growing at a faster rate than the market average. They rarely pay dividends and investors buy them in the hope of capital appreciation. A start-up technology company is likely to be a growth stock.</li>
+<li><strong>Income Stocks</strong><br />
+Income stocks pay dividends consistently. Dividends are a portion of the company’s earnings paid to shareholders. Investors buy them for the income they generate. An established utility company is likely to be an income stock.</li>
+<li><strong>Value Stocks</strong><br />
+Value stock shave a low price-to-earnings (PE) ratio, meaning they are cheaper to buy than stocks with a higher PE. Value stocks may be growth or income stocks, and their low PE ratio may reflect the fact that they have fallen out of favor with investors for some reason. People buy value stocks in the hope that the market has overreacted and that the stock’s price will rebound.</li>
+<li><strong>Blue-Chip Stocks</strong><br />
+Blue-chip stocks are shares in large, well-known companies with a solid history of growth. They generally pay dividends.</li>
+</ul>
+<h2>Potential Benefits Of Investing In Stocks</h2>
+<p>The potential benefits of investing in stocks include:</p>
+<ul>
+<li>Potential capital gains from owning an stock that grows in value over time</li>
+<li>Potential income from dividends paid by the company</li>
+<li>Lower tax rates on long-term capital gains</li>
+</ul>
+<h2>Potential Risks Of Stocks</h2>
+<p>The potential risks of investing in stocks include:</p>
+<ul>
+<li>Share prices for a company falling, even to zero</li>
+<li>If the company goes broke, you may be the last to be paid, so you may not get your money back</li>
+<li>The value of your shares will go up and down, and the dividend may vary</li>
+</ul>
+<h2>Buying And Selling Stocks</h2>
+<p>The following are the most common ways to buy stocks:</p>
+<ul>
+<li><strong>Direct Stock Plans Through Companies</strong><br />
+Some companies allow you to buy or sell their stock directly through them without using a broker. Some companies limit direct stock plans to employees of the company or existing shareholders. Some require minimum amounts for purchases or account levels.</li>
+<li><strong>Dividend Reinvestment Plans</strong><br />
+These plans allow you to buy more shares of a stock you already own by reinvesting dividend payments into the company. You must sign an agreement with the company to have this done. Check with the company or your brokerage firm to see if you will be charged for this service.</li>
+<li><strong>Discount Or Full-Service Broker</strong><br />
+Brokers buy and sell shares for customers for a fee, known as a commission. Many brokers run websites where you can buy stocks.</li>
+<li><strong>Stock Funds</strong><br />
+Stock funds are another way to buy stocks. These are a type of mutual fund that invests primarily in stocks. Stock funds are offered by investment companies and can be purchased directly from them or through a broker or adviser.</li>
+</ul>
+<h2>Researching Stocks</h2>
+<p>Before investing in a stock it’s a good idea to research the company and the stock’s performance history.</p>
+<p>Information you should consider researching include:</p>
+<ul>
+<li><strong>Annual Reports</strong><br />
+One of the best sources of information is a company's annual report. Review a company’s annual report to learn about its business activities, whether it’s making a profit or loss, and the company’s strategy for the future..</li>
+<li><strong>Prospectus</strong><br />
+Companies issuing shares are required to file a prospectus with the U.S. Securities and Exchange Commission. A prospectus is a formal legal document that gives details about the investment.</li>
+<li><strong>Stock Reports</strong><br />
+There are various reports available about a stock’s performance. Ask your stock broker or investment adviser for more information.</li>
+</ul>
+<h2>Work With Licensed Professionals and Registered Products</h2>
+<p>Investment professionals need to be licensed with the Washington Department of Financial Institutions (DFI). In addition, most investment products sold need to be registered with DFI. To check the licensing status and to find out if there are any complaints against an investment professional or investment product, contact the Washington State Department of Financial Institutions at 1.877.RING DFI (746-4334).</p>
+<p>If you live outside of Washington state, <a href="http://www.nasaa.org/about-us/contact-us/contact-your-regulator/">contact your state securities regulator</a>.</p>
+<p>Questions you should ask about the investment and professional selling the investment:</p>
+<ol>
+<li>Is the investment registered?</li>
+<li>Have investors complained about the investment in the past?</li>
+<li>Have the people who own or manage the investment been in trouble in the past?</li>
+<li>Is the person selling the investment licensed in my state?</li>
+<li>Has the person selling the investment been or trouble with the state in the past?</li>
+</ol>
+<h2>Learn More</h2>
+<ul>
+<li><a href="https://dfi.wa.gov/sites/default/files/publications/stocks-2015.pdf">Free Publication: The Basics of Investing In Stocks</a></li>
+<li><a href="https://www.investor.gov/introduction-investing/basics/investment-products/stocks">Investor.Gov - Stocks</a></li>
+</ul>
+</div></div></div>    </article>
+
+</section>
+  </div>
+    </section>
+
+    	
+
+<script type="text/javascript">
+var $ = jQuery.noConflict();
+    $(window).resize(function() {
+        if ($(this).width() >= 768) {
+          $('#search-block-mobile').hide();
+       }
+    });
+$( "#search-mobile-block-toggle" ).click(function() {     
+      $('#search-block-mobile').toggle();
+});  
+</script>  </div>
+</div>
+<footer class="footer">
+<div class="container">
+  <div class="region region-footer">
+    <section id="block-block-75" class="block block-block clearfix">
+
+      
+  <div class="center"><strong>Subscribe to Email Updates</strong></p>
+<form accept-charset="UTF-8" action="https://public.govdelivery.com/accounts/WADFI/subscribers/qualify" id="GD-snippet-form" method="post"><input name="utf8" type="hidden" value="✓" /><input name="authenticity_token" type="hidden" value="5SgW3ITiUfpMpYnGzFWmuU6Md4x2BGW4dDyeiha99weEQ90ClmCSiTlhSxsGZou8DpvIOHEc9KAJTxJIn0JagQ==" /> <input id="topic_id" name="topic_id" type="hidden" value="WADFI_41" /><br />
+<fieldset><input class="long" id="email-newsletter-subscribe-text" name="email" type="text" /> <input class="form_button" id="email-newsletter-subscribe-button" name="commit" type="submit" value="Submit" /></fieldset></form>
+</div>
+<p class="center"><strong>Follow Us</strong><br />
+<a href="http://www.facebook.com/wadfi"><img src="/images/financial-education/facebook-icon.gif" /></a> <a href="http://www.twitter.com/dficonsumers"><img src="/images/financial-education/twitter-icon.gif" /></a></p>
+<p class="center"><strong>© Washington State Department of Financial Institutions</strong><br />
+1-877-746-4334</p>
+<p class="center"><a href="/accessibility">Accessibility Statement</a> | <a href="/privacy-notice">Privacy and Legal Disclaimer</a></p>
+
+</section>
+  </div>
+</div>
+  </footer>
+  <script>da2a.targets=[
+{title:"The Basics of Investing In Stocks",url:"https:\/\/dfi.wa.gov\/financial-education\/information\/basics-investing-stocks"}];
+da2a.html_done=true;if(da2a.script_ready&&!da2a.done)da2a.init();da2a.script_load();</script>
+<script src="https://dfi.wa.gov/sites/default/files/js/js_MRdvkC2u4oGsp5wVxBG1pGV5NrCPW3mssHxIn6G9tGE.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"8e74a4f5d0","applicationID":"31148187","transactionName":"Yl1TZxFQDEJYUEEPWlsXcFAXWA1fFkNUAVBqVVBdAlYHQ2ZdWgJQak5YVhRuElBeVg==","queueTime":0,"applicationTime":259,"atts":"ThpQEVlKH0w=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
